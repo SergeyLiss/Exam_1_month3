@@ -8,7 +8,18 @@ string[] ArraySample(string[] Array, int max = 3)
     return Array.Where(i => i.Length <= max).ToArray();
 }
 
-string[] SetFinal = ArraySample(SetInitial);
+void PrintArray(string[] Array)
+{
+    foreach(string i in Array)
+    {
+        Console.Write($"{i}\t");
+    }
+    Console.WriteLine();
+}
 
+
+string[] SetFinal = ArraySample(SetInitial);
+PrintArray(SetInitial);
+PrintArray(SetFinal);
 
 
